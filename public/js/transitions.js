@@ -1,5 +1,5 @@
 // enable transitions only if scripting is enabled (otherwise the content will remain invisible)
-document.querySelectorAll('section.content-section:not(#ben-lucas)').forEach(function (el) {
+document.querySelectorAll('section.content-section:not(:nth-child(1))').forEach(function (el) {
     el.setAttribute('data-transition', 'true');
 });
 
