@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Ben Lucas</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <span class="title">benluc.as</span>
+                <div class="links">
+                    <a href="https://linkedin.com">linkedin</a>
+                    <a href="https://github.com/lucasoid">github</a>
+                </div>
+            </div>
+        </header>
+        <div id="scroll-area">
+            <div id="panorama">
+                <main>
+                    <section class="content-section">
+                        <h1 class="content-heading">Ben Lucas</h1>
+                        <ul class="content-list">
+                            <li>software engineer</li>
+                            <li>learner</li>
+                            <li>mentor</li>
+                            <li>communicator</li>
+                        </ul>
+                    </section>
+                    <section class="content-section">
+                        <h2 class="content-heading">Professional interests</h2>
+                        <ul class="content-list">
+                            <li>web dev</li>                        
+                            <li>UX &amp; performance</li>
+                            <li>cloud architecture</li>
+                            <li>devops &amp; testing</li>
+                        </ul>
+                    </section>
+                    <section class="content-section">
+                        <h2 class="content-heading">Other interests</h2>
+                        <ul class="content-list">
+                            <li>running</li>
+                            <li>biking</li>
+                            <li>playing music</li>
+                            <li>raising humans</li>
+                        </ul>
+                    </section>
+                    <section class="content-section">
+                        <h2 class="content-heading">Superpowers</h2>
+                        <ul class="content-list">
+                            <li>unflappable diplomacy</li>
+                            <li>devout pragmatism</li>
+                            <li>prodigious google-fu</li>
+                        </ul>
+                    </section>
+                    <section class="content-section">
+                        <h2 class="content-heading">Dislikes</h2>
+                        <ul class="content-list">
+                            <li>timezone bugs</li>
+                            <li>old browsers</li>
+                            <li>dogma</li>
+                        </ul>
+                    </section>
+                </main>
+            </div>                  
+            <div id="gorilla" style="display: none" role="presentation" aria-label="animation of a gorilla climbing"></div>
+        </div>
+        <script>
+            var scrollingElement = document.getElementById('scroll-area');
+            var gorillaEl = document.getElementById('gorilla');
+
+            function positionGorilla() {
+                var towerElement = document.getElementsByTagName('main')[0];
+                var leftOffset = towerElement.getBoundingClientRect().left - 60;
+                gorillaEl.style = "left: " + leftOffset + "px;";
+            }
+
+            function toggleAnimation(animate) {
+                if (animate && !gorillaEl.classList.contains('climbing')) {
+                    gorillaEl.classList.add('climbing');
+                }
+                
+                if (!animate && gorillaEl.classList.contains('climbing')) {
+                    gorillaEl.classList.remove('climbing');
+                }
+            }
+            
+            var timeoutId;
+            
+            positionGorilla();
+
+            scrollingElement.addEventListener('scroll', function (evt) {
+                toggleAnimation(true);
+                if (timeoutId) clearTimeout(timeoutId);
+                timeoutId = setTimeout(function() {
+                    toggleAnimation(false);
+                }, 50);
+            });
+
+            window.addEventListener('resize', function (evt) {
+                positionGorilla();
+            });
+        </script>
+    </body>
+</html>
