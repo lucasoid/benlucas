@@ -76,11 +76,10 @@ main {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 25%;
-    width: 0;
-    border-left: 4px solid;
-    border-right: 4px solid;
-    border-color: inherit;
+    left: calc(25% - 18px);
+    width: 36px;
+    background: url('../images/vines_green.svg');
+    background-repeat: repeat-y;
 }
 
 .content-container {    
@@ -125,6 +124,10 @@ ul.content-list {
     color: #918a6f;
 }
 
+.content-section#ben-lucas:after {
+    background-image: url('../images/vines_tan.svg');
+}
+
 .content-section#professional-interests {
     background: linear-gradient(135deg, #454837 0%, #24221c 100%);
     color: #c4c8b7;
@@ -134,6 +137,10 @@ ul.content-list {
 .content-section#professional-interests:before {
     content: '*';
     color: #24221c;
+}
+
+.content-section#professional-interests:after {
+    background-image: url('../images/vines_green.svg');
 }
 
 .content-section#other-interests {
@@ -147,24 +154,39 @@ ul.content-list {
     color: #2b1100;
 }
 
+.content-section#other-interests:after {
+    background-image: url('../images/vines_red.svg');
+}
+
 .content-section#superpowers  {
     background: linear-gradient(135deg, #212178 0%, #0b0b28 100%);
     color: #aaaaff;
     border-color: #212178;
 }
+
 .content-section#superpowers:before  {
     content: '+';
     color: #0b0b28;
 }
+
+.content-section#superpowers:after {
+    background-image: url('../images/vines_purple.svg');
+}
+
 
 .content-section#dislikes {
     background: linear-gradient(135deg, #454837 0%, #24221c 100%);
     color: #c4c8b7;
     border-color: #454837;
 }
+
 .content-section#dislikes:before {
     content: '!';
     color: #24221c;
+}
+
+.content-section#dislikes:after {
+    background-image: url('../images/vines_green.svg');
 }
 
 .content-section#not-found {
@@ -176,6 +198,10 @@ ul.content-list {
 .content-section#not-found:before {
     content: '?';
     color: #2b1100;
+}
+
+.content-section#not-found:after {
+    background-image: url('../images/vines_red.svg');
 }
 
 .content-section[data-transition="true"]:after {

@@ -7,14 +7,14 @@
     background-position: 0 0;
     position: fixed;
     top: 240px;
-    left: calc(25% - 75px);
+    left: calc(25% - 78px);
     transform: scale(.75);
 }
 
 @media screen and (min-width: 1024px) {
     #gorilla {
         transform: none;
-        left: calc(25% - 82px);
+        left: calc(25% - 88px);
     }
 }
 
