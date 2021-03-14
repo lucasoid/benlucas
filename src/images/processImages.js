@@ -52,7 +52,7 @@ function removeNamespacesRecursive(jsonDoc, namespaces) {
             }
         }          
         if (element.elements) {
-            removeNamespacesRecursive(element, namespaces);
+            element = removeNamespacesRecursive(element, namespaces);
         }
         return element;
     }).filter(element => element != null);
