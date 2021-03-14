@@ -10,7 +10,7 @@ function toggleAnimation(animate) {
         gorillaEl.classList.remove('climbing');
     }
 }
-                
+
 var timeoutId;
 
 document.addEventListener('scroll', function (evt) {
