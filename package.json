@@ -1,0 +1,22 @@
+{
+  "name": "benlucas",
+  "version": "1.0.0",
+  "description": "theme for https://benluc.as",
+  "main": "index.js",
+  "scripts": {
+    "build": "node src/images/processImages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasoid/benlucas.git"
+  },
+  "author": "Ben Lucas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucasoid/benlucas/issues"
+  },
+  "homepage": "https://github.com/lucasoid/benlucas#readme",
+  "devDependencies": {
+    "xml-js": "^1.6.11"
+  }
+}
