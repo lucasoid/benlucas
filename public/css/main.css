@@ -113,95 +113,67 @@ ul.content-list {
              "Courier New", monospace;
 }
 
-.content-section#ben-lucas {
+.content-section:nth-child(3n + 1) {
     background: linear-gradient(135deg, #c8c4b7 0%, #918a6f 100%);
     color: #24221c;
-    border-color: #c8c4b7;
+}
+
+.content-section:nth-child(3n + 1):before {
+    color: #918a6f;
+}
+
+.content-section:nth-child(3n + 1):after {
+    background-image: url('../images/vines_tan.svg');
+}
+
+.content-section:nth-child(3n + 2) {
+    background: linear-gradient(135deg, #536c5d 0%, #37483e 100%);
+    color: #dbe3de;
+}
+
+.content-section:nth-child(3n + 2):before {
+    color: #37483e;
+}
+
+.content-section:nth-child(3n + 2):after {
+    background-image: url('../images/vines_green.svg');
+}
+
+.content-section:nth-child(3n + 3) {
+    background: linear-gradient(135deg, #53676c 0%, #374548 100%);
+    color: #dbe2e3;
+}
+
+.content-section:nth-child(3n + 3):before {
+    color: #374548;
+}
+
+.content-section:nth-child(3n + 3):after {
+    background-image: url('../images/vines_blue.svg');
 }
 
 .content-section#ben-lucas:before {
     content: '{}';
-    color: #918a6f;
-}
-
-.content-section#ben-lucas:after {
-    background-image: url('../images/vines_tan.svg');
-}
-
-.content-section#professional-interests {
-    background: linear-gradient(135deg, #454837 0%, #24221c 100%);
-    color: #c4c8b7;
-    border-color: #454837;
 }
 
 .content-section#professional-interests:before {
     content: '*';
-    color: #24221c;
-}
-
-.content-section#professional-interests:after {
-    background-image: url('../images/vines_green.svg');
-}
-
-.content-section#other-interests {
-    background: linear-gradient(135deg, #552200 0%, #2b1100 100%);
-    color: #ffccaa;
-    border-color: #552200;
 }
 
 .content-section#other-interests:before {
     content: '&';
-    color: #2b1100;
-}
-
-.content-section#other-interests:after {
-    background-image: url('../images/vines_red.svg');
-}
-
-.content-section#superpowers  {
-    background: linear-gradient(135deg, #212178 0%, #0b0b28 100%);
-    color: #aaaaff;
-    border-color: #212178;
 }
 
 .content-section#superpowers:before  {
     content: '+';
-    color: #0b0b28;
-}
-
-.content-section#superpowers:after {
-    background-image: url('../images/vines_purple.svg');
-}
-
-
-.content-section#dislikes {
-    background: linear-gradient(135deg, #454837 0%, #24221c 100%);
-    color: #c4c8b7;
-    border-color: #454837;
 }
 
 .content-section#dislikes:before {
     content: '!';
-    color: #24221c;
-}
-
-.content-section#dislikes:after {
-    background-image: url('../images/vines_green.svg');
-}
-
-.content-section#not-found {
-    background: linear-gradient(135deg, #552200 0%, #2b1100 100%);
-    color: #ffccaa;
-    border-color: #552200;
 }
 
 .content-section#not-found:before {
     content: '?';
-    color: #2b1100;
-}
-
-.content-section#not-found:after {
-    background-image: url('../images/vines_red.svg');
 }
 
 .content-section[data-transition="true"]:after {
