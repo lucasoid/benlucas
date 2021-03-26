@@ -4,7 +4,7 @@
   "description": "theme for https://benluc.as",
   "main": "index.js",
   "scripts": {
-    "build": "node src/images/processImages"
+    "build": "node build/index"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lucasoid/benlucas#readme",
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "xml-js": "^1.6.11"
   }
 }

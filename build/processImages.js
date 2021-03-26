@@ -5,17 +5,15 @@
  * Also removes whitespace from the files to save on bytes.
  */
 const fs = require('fs');
-const path = require('path');
 const convert = require('xml-js');
 
-function run() {
+function run(srcPath, destPath) {
+    if (!fs.existsSync(destPath)) fs.mkdirSync(destPath);
     const namespaces = ['inkscape', 'sodipodi'];
-    const srcDir = path.resolve(__dirname, 'inkscape');
-    const outDir = path.resolve(__dirname, '../../public/images');
-    const files = fs.readdirSync(srcDir);
+    const files = fs.readdirSync(srcPath);
     files.forEach(file => {
         if (file.endsWith('.svg')) {
-            removeNamespaces(`${srcDir}/${file}`, `${outDir}/${file}`, namespaces);
+            removeNamespaces(`${srcPath}/${file}`, `${destPath}/${file}`, namespaces);
         }
     });
 }
@@ -27,7 +25,7 @@ function removeNamespaces(src, dest, namespaces) {
     if (!Array.isArray(namespaces) || namespaces.length == 0) {
         throw "No namespaces provided.";
     }
-    let xml = fs.readFileSync(src);
+    let xml = fs.readFileSync(src, 'utf8');
     let json = convert.xml2json(xml);
     let pojo = JSON.parse(json);
     let jsonCleaned = removeNamespacesRecursive(pojo, namespaces);
@@ -59,4 +57,4 @@ function removeNamespacesRecursive(jsonDoc, namespaces) {
     return jsonDoc;
 }
 
-run();
+module.exports = run;
